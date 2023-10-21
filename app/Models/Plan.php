@@ -12,7 +12,12 @@ class Plan extends Model
 
     protected $fillable = [
         'name',
+        'cod',
         'short_description',
         'price'
     ];
+
+    public function signatures() {
+        return $this->hasMany(Signature::class);
+    }
 }
